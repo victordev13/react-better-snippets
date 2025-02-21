@@ -1,0 +1,43 @@
+{
+  "name": "react-better-snippets",
+  "displayName": "React Better Snippets",
+  "description": "This extension provides a collection of React and React Native code snippets to help you write code faster and more efficiently.",
+  "version": "0.0.1",
+  "author": {
+    "name": "victordev",
+    "url": "https://github.com/victordev13"
+  },
+  "publisher": "victordev",
+  "icon": "./images/icon.png",
+  "keywords": [
+    "react",
+    "react native",
+    "snippets",
+    "reactjs",
+    "react snippets",
+    "reactnative",
+    "react native snippets",
+    "reactnative snippets"
+  ],
+  "engines": {
+    "vscode": "^1.97.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "path": "./snippets/react.code-snippets"
+      }
+    ]
+  },
+  "scripts": {
+    "pack": "vsce package",
+    "publish": "vsce package && vsce publish",
+    "publish:pre-release": "vsce package --pre-release && vsce publish --pre-release"
+  },
+  "repository": {
+    "url": "https://github.com/victordev13/react-better-snippets"
+  }
+}
