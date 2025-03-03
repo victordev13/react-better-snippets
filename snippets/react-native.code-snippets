@@ -1,0 +1,49 @@
+{
+  "React Native Component": {
+    "description": "React Native Component",
+    "prefix": "rncomponent",
+    "scope": "typescriptreact,javascriptreact",
+    "body": [
+      "import React from 'react';",
+      "import { View } from 'react-native';",
+      "",
+      "const ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}} = () => {",
+      "\treturn (",
+      "\t\t<View>",
+      "\t\t\t$2",
+      "\t\t</View>",
+      "\t);",
+      "};",
+      "",
+      "export ${3:default }$1;"
+    ]
+  },
+
+  "React Native Component with StyleSheet": {
+    "description": "React Native Component with StyleSheet",
+    "prefix": "rncomponentstyles",
+    "scope": "typescriptreact,javascriptreact",
+    "body": [
+      "import React from 'react';",
+      "import { View, Text, StyleSheet } from 'react-native';",
+      "",
+      "const ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}} = () => {",
+      "\treturn (",
+      "\t\t<View style={styles.container}>",
+      "\t\t\t$2",
+      "\t\t</View>",
+      "\t);",
+      "};",
+      "",
+      "const styles = StyleSheet.create(${3:{",
+      "\tcontainer: {",
+      "\t\tflex: 1,",
+      "\t\tjustifyContent: 'center',",
+      "\t\talignItems: 'center',",
+      "\t},",
+      "}});",
+      "",
+      "export default $1;"
+    ]
+  }
+}
