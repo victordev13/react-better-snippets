@@ -1,10 +1,14 @@
-# react-better-snippets README
+# React Better Snippets
 
 Hi React Developers 👋!
 
 This extension provides a collection of React and React Native code snippets to help you write code faster and more efficiently.
 
 ## Features
+
+### Snippets
+<!-- SNIPPETS TABLE START -->
+<!-- SNIPPETS TABLE END -->
 
 Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
 
