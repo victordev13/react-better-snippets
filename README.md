@@ -1,8 +1,8 @@
-# React Better Snippets
+# JS World Better Snippets
 
-Hi React Developers 👋!
+Hi Developers 👋!
 
-This extension provides a collection of React and React Native code snippets to help you write code faster and more efficiently.
+This extension provides a collection of JavaScript, TypeScript, React and React Native code snippets to help you write code faster and more efficiently.
 
 ## Features
 
