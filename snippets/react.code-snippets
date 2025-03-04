@@ -2,13 +2,13 @@
   "Typed React component": {
     "description": "Typed React component",
     "prefix": "typedcomponent",
-    "scope": "typescriptreact",
+    "scope": "typescriptreact,javascriptreact",
     "body": [
       "interface ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}Props {",
       "\t//",
       "}\n",
-      "export function ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}({ }: ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}Props) {",
-      "\treturn ${2:<div></div>}",
+      "export function ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}({$2}: ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}Props) {",
+      "\treturn ${3:<div></div>}",
       "}\n"
     ]
   },
@@ -43,16 +43,14 @@
     "prefix": "customhook",
     "scope": "typescriptreact,typescript,javascript,javascriptreact",
     "body": [
-      "const ${1:$TM_FILENAME_BASE} = () => {",
-      "\t$0",
-      "return true",
-      "}",
-      "\nexport default ${1:$TM_FILENAME_BASE}"
+      "export function use${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}() {",
+      "\treturn $2",
+      "}"
     ]
   },
   "React Context with custom hook (React <19)": {
     "description": "React Context with custom hook (React <19)",
-    "prefix": "ctx",
+    "prefix": "context",
     "scope": "typescriptreact,javascriptreact",
     "body": [
       "import { createContext, ReactNode, useContext } from 'react'\n",
@@ -63,15 +61,15 @@
       "type ProviderProps = {",
       "\tchildren: ReactNode",
       "}\n",
-      "const $1Context = createContext<ContextProps>({} as ContextProps)\n",
-      "export const $1Provider = ({ children }: ProviderProps) => {",
-      "\treturn <$1Context.Provider value={{}}>{children}</$1Context.Provider>",
+      "const ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}Context = createContext<ContextProps>({} as ContextProps)\n",
+      "export const ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}Provider = ({ children }: ProviderProps) => {",
+      "\treturn <${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}Context.Provider value={{}}>{children}</${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}Context.Provider>",
       "}\n",
-      "export const use$1 = () => {",
-      "\tconst context = useContext($1Context)\n",
+      "export const use${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}} = () => {",
+      "\tconst context = useContext(${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}Context)\n",
       "\tif (!context)",
       "\t\tthrow new Error(",
-      "\t\t\t'use$1 só pode ser usado dentro de um \"$1Provider\"',",
+      "\t\t\t'use${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}} can only be used inside a \"${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}Provider\"',",
       "\t\t)\n",
       "\treturn context",
       "}\n"

@@ -28,14 +28,24 @@
   "contributes": {
     "snippets": [
       {
+        "path": "./snippets/javascript.code-snippets"
+      },
+      {
+        "path": "./snippets/typescript.code-snippets"
+      },
+      {
         "path": "./snippets/react.code-snippets"
+      },
+      {
+        "path": "./snippets/react-native.code-snippets"
       }
     ]
   },
   "scripts": {
     "pack": "vsce package",
     "publish": "vsce package && vsce publish",
-    "publish:pre-release": "vsce package --pre-release && vsce publish --pre-release"
+    "publish:pre-release": "vsce package --pre-release && vsce publish --pre-release",
+    "generate-doc": "./scripts/generate-doc.sh"
   },
   "repository": {
     "url": "https://github.com/victordev13/react-better-snippets"

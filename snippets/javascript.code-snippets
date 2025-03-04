@@ -2,13 +2,13 @@
   "export": {
     "description": "export",
     "prefix": "export",
-    "scope": "typescript,javascript,typescriptreact",
-    "body": "export ${1:name}",
+    "scope": "typescript,javascript,typescriptreact,javascriptreact",
+    "body": "export ${1:name}"
   },
   "export default": {
     "description": "export default",
     "prefix": "exportdefault",
-    "scope": "typescript,javascript,typescriptreact",
+    "scope": "typescript,javascript,typescriptreact,javascriptreact",
     "body": "export default ${1:name}"
-  },
+  }
 }

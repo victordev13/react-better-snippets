@@ -4,7 +4,6 @@
     "prefix": "rncomponent",
     "scope": "typescriptreact,javascriptreact",
     "body": [
-      "import React from 'react';",
       "import { View } from 'react-native';",
       "",
       "const ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}} = () => {",
@@ -24,8 +23,7 @@
     "prefix": "rncomponentstyles",
     "scope": "typescriptreact,javascriptreact",
     "body": [
-      "import React from 'react';",
-      "import { View, Text, StyleSheet } from 'react-native';",
+      "import { View, StyleSheet } from 'react-native';",
       "",
       "const ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}} = () => {",
       "\treturn (",
@@ -40,8 +38,8 @@
       "\t\tflex: 1,",
       "\t\tjustifyContent: 'center',",
       "\t\talignItems: 'center',",
-      "\t},",
-      "}});",
+      "\t\\},",
+      "\\}});",
       "",
       "export default $1;"
     ]

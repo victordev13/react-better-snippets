@@ -5,8 +5,8 @@
     "scope": "typescriptreact,typescript,javascript,javascriptreact",
     "body": [
       "export function ${1:functionName}(${2:params}) {",
-      "\t$0",
-      "}",
+      "\t$3",
+      "}"
     ]
   },
   "TypeScript Async Function": {
@@ -15,8 +15,8 @@
     "scope": "typescriptreact,typescript,javascript,javascriptreact",
     "body": [
       "export async function ${1:functionName}(${2:params}) {",
-      "\t$0",
-      "}",
+      "\t$3",
+      "}"
     ]
   },
   "Export TypeScript Function": {
@@ -25,8 +25,8 @@
     "scope": "typescriptreact,typescript,javascript,javascriptreact",
     "body": [
       "export function ${1:functionName}(${2:params}) {",
-      "\t$0",
-      "}",
+      "\t$3",
+      "}"
     ]
   },
   "Export TypeScript Async Function": {
@@ -35,8 +35,8 @@
     "scope": "typescriptreact,typescript,javascript,javascriptreact",
     "body": [
       "export async function ${1:functionName}(${2:params}) {",
-      "\t$0",
-      "}",
+      "\t$3",
+      "}"
     ]
   },
   "TypeScript Function with Props Interface": {
@@ -47,9 +47,9 @@
       "interface ${2:Props} {",
       "}",
       "",
-      "function ${1:functionName}({ $5 }: ${2:Props}) {",
+      "function ${1:functionName}({ $3 }: ${2:Props}) {",
       "\t$4",
-      "}",
+      "}"
     ]
   },
   "TypeScript Async Function with Props Interface": {
@@ -60,9 +60,9 @@
       "interface ${2:Props} {",
       "}",
       "",
-      "async function ${1:functionName}({ $5 }: ${2:Props}) {",
+      "async function ${1:functionName}({ $3 }: ${2:Props}) {",
       "\t$4",
-      "}",
+      "}"
     ]
   },
   "Export TypeScript Function with Props Interface": {
@@ -73,9 +73,9 @@
       "interface ${2:Props} {",
       "}",
       "",
-      "export function ${1:functionName}({ $5 }: ${2:Props}) {",
+      "export function ${1:functionName}({ $3 }: ${2:Props}) {",
       "\t$4",
-      "}",
+      "}"
     ]
   },
   "Export TypeScript Async Function with Props Interface": {
@@ -86,9 +86,9 @@
       "interface ${2:Props} {",
       "}",
       "",
-      "export async function ${1:functionName}({ $5 }: ${2:Props}) {",
+      "export async function ${1:functionName}({ $3 }: ${2:Props}) {",
       "\t$4",
-      "}",
+      "}"
     ]
   },
   "TypeScript Arrow Function": {
@@ -97,18 +97,18 @@
     "scope": "typescriptreact,typescript,javascript,javascriptreact",
     "body": [
       "const ${1:functionName} = (${2:params}) => {",
-      "\t$0",
-      "}",
+      "\t$3",
+      "}"
     ]
   },
-  "TypeScript Arrow Async Function": {
-    "description": "Create a TypeScript arrow async function",
+  "TypeScript Async arrow function": {
+    "description": "Create a TypeScript async arrow function",
     "prefix": "arrowasyncfunc",
     "scope": "typescriptreact,typescript,javascript,javascriptreact",
     "body": [
       "const ${1:functionName} = async (${2:params}) => {",
-      "\t$0",
-      "}",
+      "\t$3",
+      "}"
     ]
   },
   "Export TypeScript Arrow Function": {
@@ -117,18 +117,18 @@
     "scope": "typescriptreact,typescript,javascript,javascriptreact",
     "body": [
       "export const ${1:functionName} = (${2:params}) => {",
-      "\t$0",
-      "}",
+      "\t$3",
+      "}"
     ]
   },
-  "Export TypeScript Arrow Async Function": {
-    "description": "Export a TypeScript arrow async function",
+  "Export TypeScript Async arrow function": {
+    "description": "Export a TypeScript async arrow function",
     "prefix": "exportarrowasyncfunc",
     "scope": "typescriptreact,typescript,javascript,javascriptreact",
     "body": [
       "export const ${1:functionName} = async (${2:params}) => {",
-      "\t$0",
-      "}",
+      "\t$3",
+      "}"
     ]
   },
   "TypeScript Interface": {
@@ -137,7 +137,7 @@
     "scope": "typescriptreact,typescript,javascript,javascriptreact",
     "body": [
       "interface ${1:InterfaceName} {",
-      "\t$0",
+      "\t$2",
       "}"
     ]
   },
@@ -147,7 +147,7 @@
     "scope": "typescriptreact,typescript,javascript,javascriptreact",
     "body": [
       "export interface ${1:InterfaceName} {",
-      "\t$0",
+      "\t$2",
       "}"
     ]
   },
@@ -157,7 +157,7 @@
     "scope": "typescriptreact,typescript,javascript,javascriptreact",
     "body": [
       "type ${1:TypeName} = {",
-      "\t$0",
+      "\t$2",
       "}"
     ]
   },
@@ -167,7 +167,18 @@
     "scope": "typescriptreact,typescript,javascript,javascriptreact",
     "body": [
       "export type ${1:TypeName} = {",
-      "\t$0",
+      "\t$2",
+      "}"
+    ]
+  }
+  ,
+  "TypeScript Enum": {
+    "description": "Create a TypeScript enum",
+    "prefix": "enum",
+    "scope": "typescriptreact,typescript,javascript,javascriptreact",
+    "body": [
+      "enum ${1:EnumName} {",
+      "\t$2",
       "}"
     ]
   }
