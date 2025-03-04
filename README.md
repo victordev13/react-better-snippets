@@ -54,6 +54,7 @@ This extension provides a collection of JavaScript, TypeScript, React and React 
 | `type` | Create a TypeScript type |
 | `exporttype` | Export a TypeScript type |
 | `enum` | Create a TypeScript enum |
+| `exportenum` | Export a TypeScript enum |
 
 
 <!-- SNIPPETS TABLE END -->

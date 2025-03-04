@@ -181,5 +181,15 @@
       "\t$2",
       "}"
     ]
+  },
+  "Export TypeScript Enum": {
+    "description": "Export a TypeScript enum",
+    "prefix": "exportenum",
+    "scope": "typescriptreact,typescript,javascript,javascriptreact",
+    "body": [
+      "export enum ${1:EnumName} {",
+      "\t$2",
+      "}"
+    ]
   }
 }
