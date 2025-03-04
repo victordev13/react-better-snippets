@@ -25,7 +25,7 @@ update_readme() {
     filename=$(basename "$file" "$SNIPPETS_FILE_EXTENSION")
     formatted_filename=$(filename_to_title "$filename")
     table=$(generate_snippet_table "$file")
-    tables+="## ${formatted_filename} Snippets\n\n$table\n\n"
+    tables+="#### ${formatted_filename} Snippets\n\n$table\n\n"
   done
 
   awk -v tables="$tables" '

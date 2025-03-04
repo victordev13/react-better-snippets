@@ -8,21 +8,21 @@ This extension provides a collection of JavaScript, TypeScript, React and React 
 
 ### Snippets
 <!-- SNIPPETS TABLE START -->
-## Javascript Snippets
+#### Javascript Snippets
 
 | Prefix | Description |
 |--------|-------------|
 | `export` | export |
 | `exportdefault` | export default |
 
-## React Native Snippets
+#### React Native Snippets
 
 | Prefix | Description |
 |--------|-------------|
 | `rncomponent` | React Native Component |
 | `rncomponentstyles` | React Native Component with StyleSheet |
 
-## React Snippets
+#### React Snippets
 
 | Prefix | Description |
 |--------|-------------|
@@ -33,7 +33,7 @@ This extension provides a collection of JavaScript, TypeScript, React and React 
 | `customhook` | Custom Hook |
 | `context` | React Context with custom hook (React <19) |
 
-## Typescript Snippets
+#### Typescript Snippets
 
 | Prefix | Description |
 |--------|-------------|
