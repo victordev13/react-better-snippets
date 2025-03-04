@@ -15,9 +15,11 @@
     "snippets",
     "reactjs",
     "react snippets",
-    "reactnative",
     "react native snippets",
-    "reactnative snippets"
+    "javascript",
+    "javascript snippets",
+    "typescript",
+    "typescript snippets"
   ],
   "engines": {
     "vscode": "^1.97.0"
