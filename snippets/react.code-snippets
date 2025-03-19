@@ -1,7 +1,17 @@
 {
+  "React component": {
+    "description": "React component",
+    "prefix": ["component", "rc"],
+    "scope": "typescriptreact,javascriptreact",
+    "body": [
+      "export function ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}() {",
+      "\treturn ${2:<div></div>}",
+      "}\n"
+    ]
+  },
   "Typed React component": {
     "description": "Typed React component",
-    "prefix": "typedcomponent",
+    "prefix": ["typedcomponent", "rct"],
     "scope": "typescriptreact,javascriptreact",
     "body": [
       "interface ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}Props {",
@@ -12,19 +22,9 @@
       "}\n"
     ]
   },
-  "React component": {
-    "description": "React component",
-    "prefix": "component",
-    "scope": "typescriptreact,javascriptreact",
-    "body": [
-      "export function ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}() {",
-      "\treturn ${2:<div></div>}",
-      "}\n"
-    ]
-  },
   "React async component": {
     "description": "React async component",
-    "prefix": "asynccomponent",
+    "prefix": ["asynccomponent", "rac"],
     "scope": "typescriptreact,javascriptreact",
     "body": [
       "export async function ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}() {",
@@ -32,15 +32,28 @@
       "}\n"
     ]
   },
+  "Typed async React component": {
+    "description": "Typed async React component",
+    "prefix": ["typedcomponent", "ract"],
+    "scope": "typescriptreact,javascriptreact",
+    "body": [
+      "interface ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}Props {",
+      "\t//",
+      "}\n",
+      "export function ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}({$2}: ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}Props) {",
+      "\treturn ${3:<div></div>}",
+      "}\n"
+    ]
+  },
   "React useState": {
     "description": "React useState",
-    "prefix": "us",
+    "prefix": ["us", "useState"],
     "scope": "typescriptreact,javascriptreact",
     "body": "const [${1}, set${1/(.*)/${1:/capitalize}/}] = useState($2)"
   },
   "Custom Hook": {
     "description": "Custom Hook",
-    "prefix": "customhook",
+    "prefix": ["customhook", "ch"],
     "scope": "typescriptreact,typescript,javascript,javascriptreact",
     "body": [
       "export function use${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}() {",
@@ -48,9 +61,9 @@
       "}"
     ]
   },
-  "React Context with custom hook (React <19)": {
-    "description": "React Context with custom hook (React <19)",
-    "prefix": "context",
+  "React Context with custom hook": {
+    "description": "React Context with custom hook",
+    "prefix": ["context", "ctx"],
     "scope": "typescriptreact,javascriptreact",
     "body": [
       "import { createContext, ReactNode, useContext } from 'react'\n",
@@ -64,6 +77,33 @@
       "const ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}Context = createContext<ContextProps>({} as ContextProps)\n",
       "export const ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}Provider = ({ children }: ProviderProps) => {",
       "\treturn <${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}Context.Provider value={{}}>{children}</${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}Context.Provider>",
+      "}\n",
+      "export const use${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}} = () => {",
+      "\tconst context = useContext(${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}Context)\n",
+      "\tif (!context)",
+      "\t\tthrow new Error(",
+      "\t\t\t'use${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}} can only be used inside a \"${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}Provider\"',",
+      "\t\t)\n",
+      "\treturn context",
+      "}\n"
+    ]
+  },
+  "React Context with custom hook *React 19": {
+    "description": "React Context with custom hook *React 19",
+    "prefix": ["context", "ctx"],
+    "scope": "typescriptreact,javascriptreact",
+    "body": [
+      "import { createContext, ReactNode, useContext } from 'react'\n",
+      "type ContextProps = {",
+      "\t//",
+      "}",
+      "",
+      "type ProviderProps = {",
+      "\tchildren: ReactNode",
+      "}\n",
+      "const ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}Context = createContext<ContextProps>({} as ContextProps)\n",
+      "export const ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}Provider = ({ children }: ProviderProps) => {",
+      "\treturn <${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}Context value={{}}>{children}</${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}Context>",
       "}\n",
       "export const use${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}} = () => {",
       "\tconst context = useContext(${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}Context)\n",

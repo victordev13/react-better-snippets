@@ -1,7 +1,7 @@
 {
   "React Native Component": {
     "description": "React Native Component",
-    "prefix": "rncomponent",
+    "prefix": ["rncomponent", "rnc"],
     "scope": "typescriptreact,javascriptreact",
     "body": [
       "import { View } from 'react-native';",
@@ -20,7 +20,7 @@
 
   "React Native Component with StyleSheet": {
     "description": "React Native Component with StyleSheet",
-    "prefix": "rncomponentstyles",
+    "prefix": ["rncomponentstyles", "rncs"],
     "scope": "typescriptreact,javascriptreact",
     "body": [
       "import { View, StyleSheet } from 'react-native';",

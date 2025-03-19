@@ -10,7 +10,7 @@ generate_snippet_table() {
   echo "|--------|-------------|"
   local file_content
   file_content=$(sed '/^\s*\/\//d' "$file")
-  echo "$file_content" | jq -r 'to_entries[] | "| `\(.value.prefix)` | \(.value.description) |"'
+  echo "$file_content" | jq -r 'to_entries[] | "| `\(if .value.prefix | type == "array" then .value.prefix | join("`, `") else .value.prefix end)` | \(.value.description) |"'
 }
 
 filename_to_title() {
